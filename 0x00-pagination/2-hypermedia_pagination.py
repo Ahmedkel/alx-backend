@@ -43,7 +43,7 @@ class Server:
         """Get hyper function"""
         assert type(page) is int and type(page_size) is int
         assert page > 0 and page_size > 0
-        
+
         data = self.get_page(page, page_size)
         total_pages = math.ceil(len(self.dataset()) / page_size)
         next_page = page + 1 if page < total_pages else None
