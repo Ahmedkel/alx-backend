@@ -24,7 +24,7 @@ def get_locale() -> str:
 
 
 @app.route('/')
-def index():
+def get_index() -> str:
     """
     Renders an HTML page
     with a title and a header.
