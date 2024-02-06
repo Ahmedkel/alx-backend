@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tsk 1: Basic Flask app"""
+"""Tsk 2: Basic Flask app"""
 from flask_babel import Babel
 from flask import Flask, render_template, request
 
@@ -18,9 +18,7 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale():
-    """
-    Select and return best language match based on supported languages
-    """
+    """get locale from request"""
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
